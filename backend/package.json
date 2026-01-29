@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for Product Store app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "TypeScript",
+    "Node.js",
+    "PERN"
+  ],
+  "author": "Mohd Zain (mohammedzain4099@gmail.com)",
+  "license": "ISC"
+}
