@@ -31,7 +31,7 @@ export const createComment = async (req: Request, res: Response) => {
     const comment = await queries.createComment({
       content,
       userId,
-      productId
+      productId: productId as string
     });
 
     return res.status(201).json(comment);
