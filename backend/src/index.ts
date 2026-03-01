@@ -10,7 +10,7 @@ import commentsRoutes from "./routes/commentsRoutes";
 
 const app = express();
 
-app.use(cors({ origin: ENV.FRONTEND_URL }));
+app.use(cors({ origin: ENV.FRONTEND_URL, credentials: true })); // allow backend to recieved cookies from frontend
 app.use(clerkMiddleware()); // auth obj will be attached to the req
 app.use(express.json()); // parser JSON request bodies.
 app.use(express.urlencoded({ extended: true })); // parses form data (like HTML forms)
@@ -27,9 +27,9 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use("/api/users", usersRoutes)
-app.use("/api/products", productsRoutes)
-app.use("/api/comments", commentsRoutes)
+app.use("/api/users", usersRoutes);
+app.use("/api/products", productsRoutes);
+app.use("/api/comments", commentsRoutes);
 
 const { PORT } = ENV;
 app.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`));
