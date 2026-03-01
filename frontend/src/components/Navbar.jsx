@@ -16,7 +16,7 @@ function Navbar() {
       <div className="max-w-5xl w-full mx-auto px-4 flex justify-between items-center ">
         {/* LOGO - LEFT SIDE */}
         <div className="flex-1">
-          <Link className="btn btn-ghost gap-2">
+          <Link to={"/"} className="btn btn-ghost gap-2">
             <ShoppingBagIcon className="size-5 text-primary" />
             <span className="text-lg font-bold font-mono uppercase tracking-wider">
               Productify
