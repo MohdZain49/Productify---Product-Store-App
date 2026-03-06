@@ -30,7 +30,7 @@ export const useProduct = (id) => {
 
 export const useDeleteProduct = () => {
   const result = useMutation({
-    mutationFn: (id) => deleteProduct(id),
+    mutationFn: deleteProduct,
   });
   return result;
 };
